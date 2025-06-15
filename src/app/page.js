@@ -1,12 +1,13 @@
 'use client'
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import useStore from '../store/bugstore'
-import LoginForm from '../Components/auth/LoginForm'
+import useStore from '@/store/bugstore'
+import LoginForm from '@/Components/auth/LoginForm'
 
 export default function HomePage() {
   const router = useRouter()
   const isAuthenticated = useStore(state => state.isAuthenticated)
+  console.log('HomePage isAuthenticated:', isAuthenticated);
   
   useEffect(() => {
     if (isAuthenticated) {

@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react'
-import useStore from '../../store/bugstore'
-import Button from '../../Components/ui/Button'
-import Input from '../../Components/ui/Input'
+import useStore from '@/store/bugstore'
+import Button from '@/Components/ui/Button'
+import Input from '@/Components/ui/Input'
 
 const MOCK_USERS = [
   { id: 1, username: 'developer', password: 'dev123', role: 'developer', name: 'John Developer' },
@@ -64,7 +64,7 @@ export default function LoginForm() {
           />
         </div>
         
-        <Button type="submit" className="w-full" loading={loading}>
+        <Button style={{border: '1px solid black', borderRadius: '0.375rem' }} type="submit" className="w-full" loading={loading}>
           Sign In
         </Button>
         

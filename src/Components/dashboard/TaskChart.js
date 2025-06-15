@@ -1,6 +1,6 @@
 'use client'
 import { useMemo } from 'react'
-import useStore from '../../store/bugstore'
+import useStore from '@/store/bugstore'
 
 export default function TaskChart() {
   const tasks = useStore(state => state.tasks)

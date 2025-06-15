@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
-import useStore from '../../store/bugstore'
-import Button from '../../Components/ui/Button'
+import useStore from '@/store/bugstore'
+import Button from '@/Components/ui/Button'
 
 export default function TimeTracker({ taskId }) {
   const activeTimers = useStore(state => state.activeTimers)

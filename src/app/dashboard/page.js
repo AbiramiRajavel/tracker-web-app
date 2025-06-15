@@ -1,9 +1,9 @@
 'use client'
 import { useEffect } from 'react'
-import useStore from '../../store/bugstore'
-import TaskList from '../../Components/dashboard/TaskList'
-import TaskForm from '../../Components/dashboard/TaskForm'
-import TaskChart from '../../Components/dashboard/TaskChart'
+import useStore from '@/store/bugstore'
+import TaskList from '@/Components/dashboard/TaskList'
+import TaskForm from '@/Components/dashboard/TaskForm'
+import TaskChart from '@/Components/dashboard/TaskChart'
 
 export default function DashboardPage() {
   const tasks = useStore(state => state.tasks)

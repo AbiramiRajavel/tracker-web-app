@@ -1,13 +1,15 @@
     'use client'
 import { useState, useEffect } from 'react'
-import useStore from '../../store/bugstore'
-import Modal from '../../Components/ui/Modal'
-import Input from '../../Components/ui/Input'
-import Select from '../../Components/ui/Select'
-import Button from '../../Components/ui/Button'
+import useStore from '@/store/bugstore'
+import Modal from '@/Components/ui/Modal'
+import Input from '@/Components/ui/Input'
+import Select from '@/Components/ui/Select'
+import Button from '@/Components/ui/Button'
 
 export default function TaskForm() {
   const isTaskFormOpen = useStore(state => state.isTaskFormOpen)
+  console.log('isTaskFormOpen:', isTaskFormOpen);
+  
   const editingTask = useStore(state => state.editingTask)
   const closeTaskForm = useStore(state => state.closeTaskForm)
   const addTask = useStore(state => state.addTask)
@@ -96,6 +98,7 @@ export default function TaskForm() {
       setErrors(prev => ({ ...prev, [field]: '' }))
     }
   }
+  console.log(isTaskFormOpen, formData,'isTaskFormOpen'  );
   
   return (
     <Modal isOpen={isTaskFormOpen} onClose={closeTaskForm} title={editingTask ? 'Edit Task' : 'Create New Task'}>

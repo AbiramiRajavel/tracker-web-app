@@ -1,6 +1,6 @@
 'use client'
-import useStore from '../../store/bugstore'
-import Button from '../../Components/ui/Button'
+import useStore from '@/store/bugstore'
+import Button from '@/Components/ui/Button'
 import TimeTracker from './TimeTracker'
 
 const priorityColors = {

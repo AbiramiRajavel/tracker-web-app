@@ -1,8 +1,8 @@
     'use client'
 import { useState } from 'react'
-import useStore from '../../store/bugstore'
+import useStore from '@/store/bugstore'
 import TaskCard from './TaskCard'
-import Select from '../../Components/ui/Select'
+import Select from '@/Components/ui/Select'
 
 export default function TaskList() {
   const filteredTasks = useStore(state => state.filteredTasks)

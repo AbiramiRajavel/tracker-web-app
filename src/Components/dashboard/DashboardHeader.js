@@ -1,6 +1,6 @@
 'use client'
-import useStore from '../../store/bugstore'
-import Button from '../../Components/ui/Button'
+import useStore from '@/store/bugstore'
+import Button from '@/Components/ui/Button'
 
 export default function DashboardHeader() {
   const user = useStore(state => state.user)
